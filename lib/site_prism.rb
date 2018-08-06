@@ -13,15 +13,13 @@ module SitePrism
 
   class << self
     attr_accessor :use_implicit_waits,
-                  :raise_on_wait_fors,
-                  :default_load_validations
+                  :raise_on_wait_fors
 
     def configure
       yield self
     end
   end
 
-  @default_load_validations = true
   @use_implicit_waits = false
   @raise_on_wait_fors = false
 end
